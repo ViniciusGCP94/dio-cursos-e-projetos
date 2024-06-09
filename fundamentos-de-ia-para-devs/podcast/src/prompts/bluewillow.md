@@ -1,0 +1,2 @@
+| Imagem | Um grupo semelhante à Sociedade do Anel com jovens programadores. Este grupo deve estar a trabalhar com computadores num cenário de desenvolvimento de front-end, com personagens de diferentes etnias no grupo.
+| Prompt | A group similar to the Society of the Ring with young programmers. This group should be working with computers in a front-end development scenario, with characters of different ethnicities in the group.
