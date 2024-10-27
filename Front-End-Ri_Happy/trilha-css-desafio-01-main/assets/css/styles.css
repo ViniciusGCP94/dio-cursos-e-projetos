@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    width: 100vw;
+    background-color: #000000;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    border-bottom: 1px solid #33A8DB;
+    background:radial-gradient( rgba(51, 168, 219, 0.25) 0%, rgba(51, 168, 219, 0) 100%),
+     url("/Front-End-Ri_Happy/trilha-css-desafio-01-main/assets/images/banner.png");
+}
+
+.banner .banner-content {
+    width: 518px;
+    gap: 16px;
+    opacity: 0px;
+    margin: auto;
+    text-align: center;
+}
+
+.banner .banner-content .logo{
+    text-align: center;
+}
+
+.banner .banner-content h1 {
+    text-align: center;
+    font-family: "Raleway";
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 46.96px;
+    background-image: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner .banner-content p {
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+.banner .banner-content button {
+    margin-top: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    text-align: center;
+}
+
+#course-content, #professional-challenges {
+    width: 60%;
+    gap: 12px;
+    margin: 120px auto 90px;
+    text-align: center;
+}
+
+#course-content h2, #professional-challenges h2 {
+    font-family: "Raleway";
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    line-height: 38px;
+    letter-spacing: 0.19em;
+    text-align: center;
+    text-transform: uppercase;
+    background: #33A8DB;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#course-content p, #professional-challenges p {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+} 
+
+.modules-list {
+    padding: 20px;
+}
+
+.modules-list .module {
+    background: #252525;
+    margin: 20px 0;
+    padding: 16px 127px;
+    gap: 10px;
+    border-radius: 57px;
+    opacity: 0px;
+    border: 1px solid #33A8DB;
+    box-shadow: -2px 6px 4px 0px #00000066 inset;
+
+    font-family: "Raleway";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18.78px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.modules-list .module span {
+    color: #1472B7;
+    font-weight: bold;
+}
+
+#transform-world {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    background-image: url('/Front-End-Ri_Happy/trilha-css-desafio-01-main/assets/images/woman-code.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#transform-world p {
+    width: 250px;
+    font-family: "Raleway";
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 50px;
+    text-align: left;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 2px #33A8DB;
+    text-transform: lowercase;
+    margin-left: 14%;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #33A8DB ;
+    background: linear-gradient(180deg, rgba(51, 168, 219, 0) 0%, rgba(51, 168, 219, 0.2) 99.99%, rgba(51, 168, 219, 0.2) 100%);
+}
+
+footer p {
+    color: #FFFFFF;
+}
+
+footer p a {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+    color: #1472B7;
+}
+
