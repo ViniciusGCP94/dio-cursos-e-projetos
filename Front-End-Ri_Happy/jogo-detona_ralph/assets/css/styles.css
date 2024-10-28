@@ -31,7 +31,7 @@ main{
 .panel {
     display: flex;
     justify-content: center;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
 }
 
 .square {
@@ -56,4 +56,10 @@ main{
 
 .menu-lives h2 {
     padding-left: 10px;
+}
+
+/* :nth-child(2) "nth(2)=Segundo -- child = filho*/
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2) {
+    margin-top: 1rem;
 }
