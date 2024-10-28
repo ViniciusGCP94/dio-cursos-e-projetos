@@ -26,8 +26,14 @@ function countDown(){
     if(state.values.currentTime <= 0){
         clearInterval(state.actions.countDownTimerId);
         clearInterval(state.values.timerId);
-        alert("Seu tempo terminou! O seu resultado foi:" + state.values.result)
-    }
+        alert("Seu tempo terminou! O seu resultado foi:" + state.values.result);
+    };
+};
+
+function playSound(){
+    let audio = new Audio('./assets/audio/hit.m4a');
+    audio.volume = 0.2;
+    audio.play();
 }
 
 function randomSquare (){
@@ -52,6 +58,7 @@ function addListenerHitbox(){
                 state.values.result++;
                 state.view.score.textContent = state.values.result;
                 state.values.hitPosition = null;
+                playSound();
             }
         })
     });
