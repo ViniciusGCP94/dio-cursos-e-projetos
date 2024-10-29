@@ -33,3 +33,59 @@ Além disso, a classe `Hero` inclui um método chamado `atacar` que exibe uma me
 Antes de executar o projeto, certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
 ## Como Executar o Projeto
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/classes-de-um-jogo.git
+   ```
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd classes-de-um-jogo
+    ```
+3. Execute o arquivo <code>classes.js</code> com o Node.js:
+    ```bash
+    node classes.js
+    ```
+
+## Estrutura do Código
+
+A estrutura do código segue o padrão de uma classe básica em JavaScript. Abaixo está um exemplo do código para criar a classe <code>Hero</code> e usar o método <code>atacar</code>:
+
+<code>
+```javascript
+class Hero {
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    atacar() {
+        let ataque;
+        switch (this.tipo) {
+            case "Guerreiro":
+                ataque = "usou espada";
+                break;
+            case "Mago":
+                ataque = "usou magia";
+                break;
+            case "Monge":
+                ataque = "usou artes marciais";
+                break;
+            case "Ninja":
+                ataque = "usou shuriken";
+                break;
+            default:
+                ataque = "usou um ataque desconhecido";
+        }
+        console.log(`${this.tipo} atacou usando ${ataque}`);
+    }
+}
+
+// Exemplo de uso
+const mago = new Hero("Gandalf", 738, "Mago");
+mago.atacar(); // Saída: Mago atacou usando magia
+
+const guerreiro = new Hero("Aragorn", 87, "Guerreiro");
+guerreiro.atacar(); // Saída: Guerreiro atacou usando espada
+</code>
