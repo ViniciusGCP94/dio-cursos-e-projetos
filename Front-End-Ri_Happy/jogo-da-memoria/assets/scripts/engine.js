@@ -36,12 +36,12 @@ function handleClick(){
     }
 
     if (openCard.length == 2){
-        setTimeout(checkMath, 500);
+        setTimeout(checkMatch, 500);
     }
     console.log(openCard)
 }
 
-function openMatch(){
+function checkMatch(){
     if(openCard[0].innerHTML === openCard[1].innerHTML){
         openCard[0].classList.add('boxMatch');
         openCard[1].classList.add('boxMatch');
