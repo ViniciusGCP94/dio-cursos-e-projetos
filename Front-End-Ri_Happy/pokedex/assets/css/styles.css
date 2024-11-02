@@ -1,5 +1,6 @@
 *{
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
 }
 
 section {
@@ -9,14 +10,24 @@ section {
 .pokemons {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .pokemons li {
-    height: 100px;
+    display: flex;
+    flex-direction: column;
     margin: 0.5em;
-    padding: 2em 1em;
+    padding: 1.5em 1em;
     background-color: #14a06f;
     color: #fff;
     border-radius: 1em;
+}
+
+.pokemons li img {
+    border-style: none;
+    max-width: 100%;
+    height: 100px;
+    align-self: flex-end;
 }
