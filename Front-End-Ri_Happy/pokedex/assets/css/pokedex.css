@@ -133,3 +133,20 @@
     align-self: flex-end;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    background-color: #6c79db;
+    padding: .25em 2em;
+    font-size: .8rem;
+    color: #fff;
+    border: 1px solid #6c79db;
+    border-radius: .3rem;
+}
+
