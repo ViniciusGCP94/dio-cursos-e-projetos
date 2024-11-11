@@ -46,3 +46,27 @@
     background: #fff;
     padding: 30px;
 }
+
+.frame {
+    border: 3px solid #000;
+    border-radius: 5px;
+}
+
+.card-details {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    width: 100%;
+}
+
+#card-name{
+    font-size: 0.8rem;
+}
+
+#card-type {
+    font-size: 1rem;
+}
