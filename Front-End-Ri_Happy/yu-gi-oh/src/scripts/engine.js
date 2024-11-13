@@ -42,7 +42,7 @@ const cardData = [
         id: 1,
         name: 'Dark Magician',
         type: 'rock',
-        imagePath: `${pathImages}magician.png`,
+        image: `${pathImages}magician.png`,
         winsAgainst: [0], // Ganha do Blue-Eyes White Dragon
         losesTo: [2] // Perde para Exodia
     },
@@ -51,7 +51,7 @@ const cardData = [
         id: 2,
         name: 'Exodia',
         type: 'scissors',
-        imagePath: `${pathImages}exodia.png`,
+        image: `${pathImages}exodia.png`,
         winsAgainst: [1], // Ganha do Dark Magician
         losesTo: [0] // Perde para Blue-Eyes White Dragon
     }
@@ -80,6 +80,12 @@ async function getCreateCardImage(IdCard, fieldSide){
 async function getRandomCardId(){
     const randomIndex = Math.floor(Math.random() * cardData.length);
     return cardData[randomIndex].id;
+}
+
+async function drawSelectCard(index) {
+    state.cardSprites.avatar.src = cardData[index].image;
+    state.cardSprites.name.innerText = cardData[index].name;
+    state.cardSprites.type.innerText = `Attribute : ${cardData[index].type}`;
 }
 
 async function drawCards (cardNumbers,fieldSide) {
