@@ -55,14 +55,39 @@ const cardData = [
         winsAgainst: [1], // Ganha do Dark Magician
         losesTo: [0] // Perde para Blue-Eyes White Dragon
     }
-]
+];
+
+async function getCreateCardImage(IdCard, fieldSide){
+    const cardImage = document.getElementById("img");
+    cardImage.setAttribute("height","100px");
+    cardImage.setAttribute("src",".src/assets/icons/card-back.png");
+    cardImage.setAttribute("data-id", IdCard);
+    cardImage.classList.add("card");
+
+    if (fieldSide === playerSides.player1){
+        cardImage.addEventListener("click", () => {
+            setCardsField(cardImage.getAttribute("data-id"))
+        })
+    }
+
+    cardImage.addEventListener("mouseover", () => {
+        drawSelectCard(IdCard)
+    })
+
+    return cardImage;
+}
+
+async function getRandomCardId(){
+    const randomIndex = Math.floor(Math.random() * cardData.length);
+    return cardData[randomIndex].id;
+}
 
 async function drawCards (cardNumbers,fieldSide) {
     for (let i = 0; i < cardNumbers; i++){
         const randomIdCard = await getRandomCardId();
         const cardImage = await getCreateCardImage(randomIdCard, fieldSide);
 
-        document.getElementById(fieldSide).appendChild(cardImage)
+        document.getElementById(fieldSide).appendChild(cardImage);
     }
 }
 
