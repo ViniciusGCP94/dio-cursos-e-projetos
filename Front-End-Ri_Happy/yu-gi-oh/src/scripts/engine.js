@@ -22,11 +22,11 @@ const state = {
 }
 
 const playerSides = {
-    player1: "player-field-card",
-    computer: "computer-field-card"
+    player1: "player-cards",
+    computer: "computer-cards"
 };
 
-const pathImages = ".src/assets/icons/"
+const pathImages = "./src/assets/icons/"
 
 const cardData = [
     {
@@ -42,7 +42,7 @@ const cardData = [
         id: 1,
         name: 'Dark Magician',
         type: 'rock',
-        imagePath: `${baseImagePath}/magician.png`,
+        imagePath: `${pathImages}magician.png`,
         winsAgainst: [0], // Ganha do Blue-Eyes White Dragon
         losesTo: [2] // Perde para Exodia
     },
@@ -51,16 +51,16 @@ const cardData = [
         id: 2,
         name: 'Exodia',
         type: 'scissors',
-        imagePath: `${baseImagePath}/exodia.png`,
+        imagePath: `${pathImages}exodia.png`,
         winsAgainst: [1], // Ganha do Dark Magician
         losesTo: [0] // Perde para Blue-Eyes White Dragon
     }
 ];
 
 async function getCreateCardImage(IdCard, fieldSide){
-    const cardImage = document.getElementById("img");
-    cardImage.setAttribute("height","100px");
-    cardImage.setAttribute("src",".src/assets/icons/card-back.png");
+    const cardImage = document.createElement("img");
+    cardImage.setAttribute("height", "100px");
+    cardImage.setAttribute("src", "./src/assets/icons/card-back.png");
     cardImage.setAttribute("data-id", IdCard);
     cardImage.classList.add("card");
 
