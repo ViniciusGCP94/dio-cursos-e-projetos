@@ -36,8 +36,8 @@ const cardData = [
         name:"Blue Eyes White Dragon",
         type:"paper",
         image: `${pathImages}dragon.png`,
-        winsAgainst: [2], // Ganha do Exodia
-        losesTo: [1] // Perde para Dark Magician
+        WinOf: [2], // Ganha do Exodia
+        LoseOf: [1] // Perde para Dark Magician
     },
 
     {
@@ -45,8 +45,8 @@ const cardData = [
         name: 'Dark Magician',
         type: 'rock',
         image: `${pathImages}magician.png`,
-        winsAgainst: [0], // Ganha do Blue-Eyes White Dragon
-        losesTo: [2] // Perde para Exodia
+        WinOf: [0], // Ganha do Blue-Eyes White Dragon
+        LoseOf: [2] // Perde para Exodia
     },
 
     {
@@ -54,8 +54,8 @@ const cardData = [
         name: 'Exodia',
         type: 'scissors',
         image: `${pathImages}exodia.png`,
-        winsAgainst: [1], // Ganha do Dark Magician
-        losesTo: [0] // Perde para Blue-Eyes White Dragon
+        WinOf: [1], // Ganha do Dark Magician
+        LoseOf: [0] // Perde para Blue-Eyes White Dragon
     }
 ];
 
@@ -96,12 +96,38 @@ async function setCardsField(idCard){
     state.fieldCards.player.src = cardData[idCard].image;
     state.fieldCards.computer.src = cardData[computerIdCard].image;
 
-    let duelResults = checkDuelResults(idCard, computerIdCard);
+    let duelResults = await checkDuelResults(idCard, computerIdCard);
 
 
-    await upadateScore();
-    await drawButton(duelResults)
+    await updateScore();
+    await drawButton(duelResults);
 
+}
+
+async function drawButton(text){
+    state.actions.resetButton.innerText = text;
+    state.actions.resetButton.style.display = "block"
+}
+
+async function updateScore(){
+    state.score.scoreBox.innerText = `Win: ${state.score.playerScore} | Lose: ${state.score.computerScore}`
+}
+
+async function checkDuelResults(playerIdCard, computerIdCard){
+    let duelResults = "Empate";
+    let playerCard = cardData[playerIdCard];
+
+    if (playerCard.WinOf.includes(computerIdCard)){
+        duelResults = "Ganhou";
+        state.score.playerScore++;
+    }
+
+    if (playerCard.LoseOf.includes(computerIdCard)){
+        duelResults = "Perdeu";
+        state.score.computerScore++;
+    }
+
+    return duelResults;
 }
 
 async function removeAllCardsImage(){
@@ -134,4 +160,4 @@ function init( ) {
     drawCards(5, state.playerSides.computer)
 }
 
-init();
+init()
