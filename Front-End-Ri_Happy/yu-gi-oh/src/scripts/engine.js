@@ -57,17 +57,17 @@ const cardData = [
     }
 ];
 
-async function getCreateCardImage(IdCard, fieldSide){
+async function getCreateCardImage(idCard, fieldSide){
     const cardImage = document.createElement("img");
     cardImage.setAttribute("height", "100px");
     cardImage.setAttribute("src", "./src/assets/icons/card-back.png");
-    cardImage.setAttribute("data-id", IdCard);
+    cardImage.setAttribute("data-id", idCard);
     cardImage.classList.add("card");
 
     if (fieldSide === playerSides.player1){
 
         cardImage.addEventListener("mouseover", () => {
-            drawSelectCard(IdCard)
+            drawSelectCard(idCard)
         })
         
         cardImage.addEventListener("click", () => {
@@ -81,6 +81,25 @@ async function getCreateCardImage(IdCard, fieldSide){
 async function getRandomCardId(){
     const randomIndex = Math.floor(Math.random() * cardData.length);
     return cardData[randomIndex].id;
+}
+
+async function setCardsField(idCard){
+    await removeAllCardsImage();
+
+    computerIdCard = await getRandomCardId();
+
+    state.fieldCards.player.style.display = "block";
+    state.fieldCards.computer.style.display = "block";
+
+    state.fieldCards.player.src = cardData[idCard].img;
+    state.fieldCards.computer.src = cardData[computerIdCard].img;
+
+    let duelResults = checkDuelResults(idCard, computerIdCard);
+
+
+    await upadateScore();
+    await drawButton(duelResults)
+
 }
 
 async function drawSelectCard(index) {
