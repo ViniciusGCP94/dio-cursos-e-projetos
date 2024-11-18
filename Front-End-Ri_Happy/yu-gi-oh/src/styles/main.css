@@ -97,7 +97,7 @@ img:hover {
 .card-versus__container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     align-content: center;
     height: 300px;
 }

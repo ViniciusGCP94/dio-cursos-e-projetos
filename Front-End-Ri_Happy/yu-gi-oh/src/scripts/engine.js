@@ -93,6 +93,8 @@ async function setCardsField(idCard){
     state.fieldCards.player.style.display = "block";
     state.fieldCards.computer.style.display = "block";
 
+    await hiddenCardDetails();
+
     state.fieldCards.player.src = cardData[idCard].image;
     state.fieldCards.computer.src = cardData[computerIdCard].image;
 
@@ -102,6 +104,12 @@ async function setCardsField(idCard){
     await updateScore();
     await drawButton(duelResults);
 
+}
+
+async function hiddenCardDetails(){
+    state.cardSprites.avatar.src = "";
+    state.cardSprites.name.innerText = "";
+    state.cardSprites.type.innerText = "";
 }
 
 async function drawButton(text){
@@ -161,9 +169,6 @@ async function resetDuel(){
     state.cardSprites.avatar.src = "";
     state.actions.resetButton.style.display ="none";
 
-    state.fieldCards.player.style.display = "none";
-    state.fieldCards.computer.style.display = "none";
-
     init();
 }
 
@@ -173,11 +178,15 @@ async function playAudio(status){
 }
 
 function init( ) {
+    state.fieldCards.player.style.display = "none";
+    state.fieldCards.computer.style.display = "none";
+
+
     drawCards(5, state.playerSides.player1)
     drawCards(5, state.playerSides.computer)
 
     const bgm = document.getElementById("bgm");
-    bgm.play();
+    //bgm.play();
 }
 
 init()
