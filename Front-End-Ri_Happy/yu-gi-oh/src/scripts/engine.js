@@ -105,7 +105,7 @@ async function setCardsField(idCard){
 }
 
 async function drawButton(text){
-    state.actions.resetButton.innerText = text;
+    state.actions.resetButton.innerText = text.toUpperCase();
     state.actions.resetButton.style.display = "block"
 }
 
@@ -114,16 +114,18 @@ async function updateScore(){
 }
 
 async function checkDuelResults(playerIdCard, computerIdCard){
-    let duelResults = "Empate";
+    let duelResults = "draw";
     let playerCard = cardData[playerIdCard];
 
     if (playerCard.WinOf.includes(computerIdCard)){
-        duelResults = "Ganhou";
+        duelResults = "win";
+        await playAudio(duelResults)
         state.score.playerScore++;
     }
 
     if (playerCard.LoseOf.includes(computerIdCard)){
-        duelResults = "Perdeu";
+        duelResults = "lose";
+        await playAudio(duelResults)
         state.score.computerScore++;
     }
 
@@ -153,6 +155,21 @@ async function drawCards (cardNumbers,fieldSide) {
 
         document.getElementById(fieldSide).appendChild(cardImage);
     }
+}
+
+async function resetDuel(){
+    state.cardSprites.avatar.src = "";
+    state.actions.resetButton.style.display ="none";
+
+    state.fieldCards.player.style.display = "none";
+    state.fieldCards.computer.style.display = "none";
+
+    init();
+}
+
+async function playAudio(status){
+    const audio = new Audio(`./src/assets/audios/${status}.wav`);
+    audio.play();
 }
 
 function init( ) {
