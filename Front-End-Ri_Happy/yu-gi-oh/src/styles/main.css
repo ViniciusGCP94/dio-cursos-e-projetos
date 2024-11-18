@@ -1,3 +1,13 @@
+body{
+    cursor: url('../assets/cursor/yugicursor.png'), default;
+}
+
+button:hover,
+a:hover,
+img:hover {
+        cursor: url('../assets/cursor/yamiyugicursorGLOW.png'), auto;
+}
+
 .container{
     position: relative;
     z-index: 3;
@@ -89,7 +99,6 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding-top: 0.2rem;
     height: 300px;
 }
 
@@ -121,6 +130,7 @@
     height: 11.2rem;
     width: 8rem;
     border-radius: 8px;
+    border: 1px solid #fff;
 }
 
 .card{
@@ -129,8 +139,4 @@
 
 .card:hover {
     transform: scale(1.2);
-}
-
-.debug {
-    border: 1px solid #ff0000;
 }
