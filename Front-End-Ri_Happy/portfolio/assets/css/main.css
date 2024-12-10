@@ -1,0 +1,83 @@
+:root {
+    --prymary-color: #F0F0F0;
+    --primary-bg-color: #094173;
+    --secondary-bg-color: #094A73;
+    --border-color:#C7C8C9;
+    --title-color: #F0F0F0;
+    --text-color: #C5D0D9;
+    --link-color: #C5D0D9;
+    --icon-color: #C7C8C9;
+}
+
+body {
+    background: var(--primary-bg-color);
+    color: var(--text-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.1rem;
+}
+
+i {
+    color: var(--icon-color);
+}
+
+#toggleTheme {
+    font-size: 1.5rem;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 3rem;
+    background: var(--prymary-bg-color);
+}
+
+.menu-mobile {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+
+}
+
+.menu-mobile .menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.menu-link.active .menu-icon, 
+.menu-link.active .menu-text {
+    color: var(--prymary-color);
+    font-weight: 600;
+}
+
+.menu-icon, .menu-text {
+    color: var(--text-color);
+}
+
+.menu-icon {
+    font-size: 1.4rem;
+}
+
+.menu-text {
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+.menu-item{
+    width: 100%;
+}
