@@ -1,21 +1,52 @@
-:root {
+:root, :root[data-theme='Blue'] {
     --prymary-color: #F0F0F0;
+
     --primary-bg-color: #094173;
     --secondary-bg-color: #094A73;
+
     --border-color:#C7C8C9;
+
     --title-color: #F0F0F0;
     --text-color: #C5D0D9;
+
     --link-color: #C5D0D9;
     --icon-color: #C7C8C9;
+}
+
+:root, :root[data-theme="Light"]{
+    --prymary-color: #062A73;
+
+    --primary-bg-color: #C5D0D9;
+
+    --border-color:#094A73;
+    --secondary-border-color:#C7C8C9;
+
+    --title-color: #062A73;
+    --text-color: #094173;
+
+    --link-color: #094173;
+    --icon-color: #094A73;
+}
+
+html[data-theme='Light'] img.logo-vp{
+    content: url('../images/logo-vp-claro.png') ;
 }
 
 body {
     background: var(--primary-bg-color);
     color: var(--text-color);
+    margin-bottom: 3.5rem;
+    font-size: 1.1rem;
 }
 
 a{
     text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--link-color);
+    font-weight: 600;
 }
 
 header {
@@ -30,6 +61,27 @@ i {
     color: var(--icon-color);
 }
 
+h1,h2,h3 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: var(--title-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+b {
+    font-weight: 400;
+}
+
+p{
+    font-size: 1.25rem;
+    text-align: justify;
+    color: var(--text-color);
+}
+
 .toggle-box {
     display: flex;
     justify-content: flex-end;
@@ -37,6 +89,8 @@ i {
 
 #toggleTheme {
     font-size: 1.5rem;
+    cursor: pointer;
+    transition: ease-in-out .5s;
 }
 
 .menu{
@@ -72,6 +126,7 @@ i {
 .menu-link.active .menu-text,
 .menu-link:hover .menu-icon, 
 .menu-link:hover .menu-text {
+    cursor: pointer;
     color: var(--prymary-color);
     font-weight: 600;
 }
@@ -93,11 +148,120 @@ i {
     width: 100%;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 1rem;
+}
+
+.main-content1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.main-content1 .socials-link {
+    gap: 1rem;
+}
+
+.main-content1 .home-cta {
+    background: transparent;
+    border-radius: 3.125rem;
+}
+
+.main-content1 .home-cta span {
+    color: var(--prymary-color);
+}
+
+.btn {
+    display: flex;
+    gap: .625rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid var(--prymary-color);
+    padding: 0.875rem 1rem;
+}
+
+.btn span, .btn i {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.main-content2 img{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.stacks {
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding: 6.25rem 1rem 2rem 1rem;
+    background: var(--secondary-bg-color);
+    margin-top: -5.5rem;
+}
+
+.stacks h2 {
+    font-size: 2rem;
+    text-transform: none;
+}
+
+.stacks-list {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.stack-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    /*width: 4.8rem;
+    height: 4.8rem;
+    aspect-ratio: 1/1;
+    border-radius: 50rem;
+    border: 1px solid var(--link-color);*/
+    list-style: none;
+    
+}
+
+.stack-logo {
+    width: 4.8rem;
+    height: 4.8rem;
+    aspect-ratio: 1/1;
+    border-radius: 50rem;
+    padding: .3rem;
+    border: 1px solid var(--link-color);
+}
+
+.stack-name {
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer p {
+    font-size: .875rem;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 5rem;
+}
+
 @media (min-width:769px) {
 
     header {
         width: 100vw;
-        position: fixed;
+        position: sticky;
         border-bottom: 1px solid var(--border-color);
         padding: 1rem 3rem;
         background: var(--primary-bg-color);
@@ -113,7 +277,7 @@ i {
     }
 
     .menu-text{
-        font-size: 1rem;
+        font-size: .75rem;
     }
 
     .menu-principal {

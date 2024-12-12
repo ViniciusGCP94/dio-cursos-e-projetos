@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="Blue">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio do desenvolvedor Front-End Vinícius Pereira para compartilhar projetos e habilidades desenvolvidas">
 
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- fAVICON DEVE FICAR REDONDO-->
     <link rel="shortcut icon" href="./assets/images/vp-favicon.ico" type="image/x-icon">
@@ -43,6 +47,8 @@
             </ul>
         </nav>
         <img class="logo-vp" src="./assets/images/logo-vp_comp-mobile.png" alt="Logo VP">
+        
+        <!-- Fazer um display de botão on/off nesse botão de Tema -->
         <div class="toggle-box">
             <i id="toggleTheme" class="bi bi-sun"></i>
         </div>
@@ -80,6 +86,43 @@
             </li>
         </ul>
     </nav>
-    <h1>Vinícius Pereira</h1>
+
+    <main>
+        <section class="main-content1">
+            <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
+            <p>Vinícius Pereira, Santa Cruz do Sul - RS, Desenvolvedor Front-end.</p>
+            <ul class="menu socials-link">
+                <li><a class="menu-link" href=""><i class="menu-icon bi bi-github"></i></a></li>
+                <li><a class="menu-link" href=""><i class="menu-icon bi bi-linkedin"></i></a></li>
+                <li><a class="menu-link" href=""><i class="menu-icon bi bi-instagram"></i></a></li>
+            </ul>
+            <button class="btn home-cta">
+                <span>Ver Projetos</span>
+                <i class="menu-icon bi bi-arrow-down-right"></i>
+            </button>
+        </section>
+        <section class="main-content2" >
+            <!--VIDEO MOSTRANDO OS TRABALHOS CRIADOS-->
+            <!--<iframe src="" frameborder="0"></iframe>--> 
+
+            <!--FOTO ILUSTRATIVA DO VÍDEO-->
+            <img src="https://media.licdn.com/dms/image/v2/D5612AQFfhTEictqBHA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721174916441?e=1739404800&v=beta&t=ga6l5lWI6QC4bREsg7jCiSZ-tqYKQNgFncVS1CTxpSY" alt="Video Youtube">
+        </section>
+        
+    </main>
+    <section class="stacks">
+        <h2>Conhecimento nas principais tecnologias do mercado</h2>
+        <ul class="stacks-list">
+            <li class="stack-item"><img class="stack-logo" src="./assets/images/html.png" alt="html5"><span class="stack-name">html5</span></li>
+            <li class="stack-item"><img class="stack-logo" src="./assets/images/css3.png" alt="css3"><span class="stack-name">css3</span></li>
+            <li class="stack-item"><img class="stack-logo" src="./assets/images/bootstrap.png" alt="bootstrap"><span class="stack-name">bootstrap</span></li>
+            <li class="stack-item"><img class="stack-logo" src="./assets/images/js.png" alt="javascript"><span class="stack-name">javascript</span></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024. Todos os Direitos Reservados. Vinícius Pereira. Desenvolvido por <a href="#">VP</a>.</p>
+    </footer>
+    <script src="./assets/script/script.js"></script>
 </body>
 </html>
