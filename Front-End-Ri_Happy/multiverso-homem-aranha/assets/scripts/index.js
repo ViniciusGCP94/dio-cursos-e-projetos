@@ -16,6 +16,24 @@ function addEventListenersToCards() {
     card.addEventListener('mouseenter', handleMouseEnter);
     card.addEventListener('mouseleave', handleMouseLeave);
   }
+
+  // animação de carroussel no menu de nomes  
+  document.querySelectorAll('.menu__item a').forEach(link => {
+    link.addEventListener('click', function (event){
+      event.preventDefault();
+      const linkText = this.textContent.trim();
+
+      let selectedId;
+      if(linkText === 'Tobey Maguire') selectedId = '1';
+      if(linkText === 'Tom Holland') selectedId = '2';
+      if(linkText === 'Andrew Garfield') selectedId = '3';
+
+      if (selectedId) {
+        const button = document.getElementById(selectedId);
+        selectCarouselItem(button);
+      }
+    });
+  });
 }
 
 document.addEventListener("DOMContentLoaded", addEventListenersToCards, false);

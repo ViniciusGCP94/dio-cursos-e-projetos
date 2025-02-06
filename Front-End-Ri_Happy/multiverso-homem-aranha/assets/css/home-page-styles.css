@@ -24,7 +24,6 @@ body::before {
   width: 100%;
   text-align: center;
   position: relative;
-  border: 1px solid red;
 }
 
 .menu__item {
@@ -111,7 +110,7 @@ body::before {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-  bottom: 1.5rem;
+  bottom: 0.5rem;
   width: 100%;
 }
 
