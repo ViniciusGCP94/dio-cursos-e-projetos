@@ -218,7 +218,6 @@ body[id^="spider-man-"] .card:not(.card--hovered) {
   .cards-carousel {
     width: 80%;
     height:100% ;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -234,42 +233,41 @@ body[id^="spider-man-"] .card:not(.card--hovered) {
   .menu {
   display: grid;
   grid-template-columns: 100px 1fr;
-  align-items: center;
   max-width: 480px; /* Ajuste conforme necessário */
-  margin: auto auto;
-}
-
-.menu ul {
-  display: contents; /* Mantém os <li> dentro da grid */
-  padding: 15px;
   border: 1px solid white;
-}
 
-.menu__icon {
-  grid-row: 1 / span 4; /* Ocupa todas as linhas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 30px;
-}
+  }
 
-.menu__icon img {
-  height: 120px;
-}
+  .menu ul {
+    display: contents; /* Mantém os <li> dentro da grid */
+  }
 
-.menu__item {
-  text-align: end;
-  padding: 5px;
-}
+  .menu__icon {
+    grid-row: 1/4; /* Ocupa todas as linhas */
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    border: 4px solid #fff;
+    width: 70%;
+  }
 
-.menu__item a {
-  text-decoration: none;
-  color: white;
-}
+  .menu__icon img {
+    height: 100px;
+  }
 
-.menu__item:nth-child(1){
-  display: none;
-}
+  .menu__item {
+    text-align: end;
+    padding: 5px;
+  }
+
+  .menu__item a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .menu__item:nth-child(1){
+    display: none;
+  }
 
 
 }
