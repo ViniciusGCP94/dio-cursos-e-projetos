@@ -98,3 +98,33 @@
   background-image: url('../images/spiderman-tobey/movie-03/background.png');
   background-size: cover;
 }
+
+@media (max-width: 1380px) {
+
+  .logo_3{
+    padding: 0;
+  }
+
+
+  .wrapper .main-content .logo .img_3{
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .wrapper .main-content .logo .img-AG{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 25vh;
+  }
+
+  .wrapper .main-content__top .description{
+    background-color: rgba(0,0,0,.7);
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .wrapper .main-content__top .description .pills{
+    margin-bottom: 5px;
+  }
+}
