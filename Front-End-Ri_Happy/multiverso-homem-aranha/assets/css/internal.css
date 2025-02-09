@@ -15,7 +15,6 @@
 .wrapper video{
   position: fixed;
   width: 100%;
-
 }
 
 .wrapper .left-column {
@@ -109,18 +108,25 @@
   .wrapper .main-content .logo .img_3{
     margin-top: 0;
     margin-bottom: 5px;
+    height: 25vh;
   }
 
-  .wrapper .main-content .logo .img-AG{
-    margin-top: 20px;
-    margin-bottom: 20px;
+  .wrapper .main-content .logo .img-amazing{
+    margin-top: 10px;
+    margin-bottom: 10px;
     height: 25vh;
+  }
+
+  .wrapper .main-content .logo .img_Tom-Holland {
+    margin-top: 0;
+    margin-bottom: 10px;
+    height: 30vh;
   }
 
   .wrapper .main-content__top .description{
     background-color: rgba(0,0,0,.7);
     max-width: 80%;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
   }
 

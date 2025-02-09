@@ -203,6 +203,17 @@ body[id^="spider-man-"] .card:not(.card--hovered) {
 
 /* RESPONSIVIDADE */
 
+@media (max-width: 1380px) {
+  
+  .controller {
+    margin-bottom: 2rem;
+  }
+
+  .card__title{
+    bottom: 1.25rem;
+  }
+}
+
 @media (max-width: 480px) {
 
   body {
