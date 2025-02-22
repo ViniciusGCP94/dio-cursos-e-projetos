@@ -73,16 +73,6 @@
   margin-bottom: 20px;
 }
 
-.wrapper .main-content .links{
-  padding: 20px;
-  padding-left: 0;
-}
-
-.wrapper .main-content .links ul{
-  display: flex;
-  flex-direction: row;
-}
-
 .spiderman-01-01 {
   background-image: url('../images/spiderman-tobey/movie-01/background.png');
   background-size:cover;
@@ -123,9 +113,14 @@
     height: 30vh;
   }
 
+  .wrapper .main-content__top {
+    height: 40vh;
+    margin-bottom: 40px;
+  }
+
   .wrapper .main-content__top .description{
     background-color: rgba(0,0,0,.7);
-    max-width: 80%;
+    max-width: 85%;
     padding: 20px;
     border-radius: 10px;
   }
@@ -133,4 +128,65 @@
   .wrapper .main-content__top .description .pills{
     margin-bottom: 5px;
   }
+}
+
+@media (max-width: 1024px) {
+  
+  .wrapper video{
+    position: fixed;
+    width: auto;
+    height: 100%;
+  }
+
+  .wrapper .main-content .logo img,
+  .wrapper .main-content .logo .img_3{
+    width: 75vw;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .wrapper .main-content__top .description{
+    max-width: 70%;
+  }
+
+  .wrapper .main-content__bottom {
+    width: 70vw;
+    height: 80vh;
+  }
+}
+
+  @media (max-width: 768px) {
+
+    .wrapper .main-content__top {
+      height: 50vh;
+    }
+
+    .wrapper .main-content .logo img,
+    .wrapper .main-content .logo .img_3{
+      width: 100vw;
+    }
+
+    .wrapper .main-content .logo .img_Tom-Holland {
+      width:85vw;
+      height: 20vh;
+    }
+    
+    .wrapper .main-content__top .description{
+      width: 100vw;
+      
+    }
+
+    .wrapper .main-content__top .description_Tom-Holland{
+      max-width: 70%;
+    }
+
+    .wrapper .main-content__bottom {
+      margin-top: 18vh;
+      height: 40vh;
+    }
+    
+    .wrapper .main-content__bottom-Andrew_Garfield{
+      margin-top: 30vh;
+    }
 }

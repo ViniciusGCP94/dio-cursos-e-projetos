@@ -214,6 +214,24 @@ body[id^="spider-man-"] .card:not(.card--hovered) {
   }
 }
 
+
+@media (max-width: 1024px){
+  .menu__item {
+    margin: 0 1rem;
+  }
+
+  .cards-carousel {
+    margin-top: 4rem;
+    width: 35vw;
+    height: 50vh;
+  }
+}
+
+@media (max-width: 780px) {
+
+}
+
+
 @media (max-width: 480px) {
 
   body {
