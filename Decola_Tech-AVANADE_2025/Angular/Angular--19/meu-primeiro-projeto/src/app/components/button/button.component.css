@@ -1,0 +1,9 @@
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+button{
+    width: 15%;
+}
