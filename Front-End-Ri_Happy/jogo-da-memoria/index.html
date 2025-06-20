@@ -8,11 +8,30 @@
     <title>Jogo da Memória</title>
 </head>
 <body>
+     <div class="toggle-switch">
+        <span class="toggle-label">Música</span>
+        <input type="checkbox" id="musicToggle" checked>
+        <label for="musicToggle"></label>
+    </div>
     <div class="container">
         <h2>Jogo da Memória</h2>
         <div class="game"></div>
         <button class="reset" onclick="window.location.reload()">Reset Game</button>
     </div>
+    <script>
+        const musicToggle = document.getElementById('musicToggle');
+        let audio = new Audio('./assets/music/background-music.mp3'); // Path to your music file
+        audio.loop = true;
+        audio.play();
+
+        musicToggle.addEventListener('change', () => {
+            if (musicToggle.checked) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
     <script defer src="./assets/scripts/engine.js"></script>
 </body>
 </html>
